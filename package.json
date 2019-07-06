@@ -4,7 +4,8 @@
   "description": "Hexlet project",
   "main": "dist/index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
@@ -24,10 +25,10 @@
   },
   "homepage": "https://github.com/1ocke/frontend-project-lvl1#readme",
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/node": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
     "babel-eslint": "^10.0.2",
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.2.0",
