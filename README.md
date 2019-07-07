@@ -10,3 +10,5 @@
 
 ## Use
     brain-even
+
+[![asciicast](https://asciinema.org/a/m6v4inLlYoEKP7I8nqXvtXYht.svg)](https://asciinema.org/a/m6v4inLlYoEKP7I8nqXvtXYht)
