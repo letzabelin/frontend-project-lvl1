@@ -8,7 +8,8 @@
 
     npm link 1ocke.brain-games
 
-## Use
-    brain-even
-
+## brain-even
 [![asciicast](https://asciinema.org/a/m6v4inLlYoEKP7I8nqXvtXYht.svg)](https://asciinema.org/a/m6v4inLlYoEKP7I8nqXvtXYht)
+
+## brain-calc
+[![asciicast](https://asciinema.org/a/sAYHZyqBrW3iAmiTigiFjjEcu.svg)](https://asciinema.org/a/sAYHZyqBrW3iAmiTigiFjjEcu)
