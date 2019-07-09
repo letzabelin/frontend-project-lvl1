@@ -1,7 +1,12 @@
 {
   "name": "1ocke.brain-games",
-  "version": "1.1.3",
-  "description": "Hexlet project",
+  "version": "1.2.0",
+  "description": "Brain-games by Hexlet",
+  "keywords": [
+    "hexlet's brain-games",
+    "brain-games",
+    "games"
+  ],
   "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",

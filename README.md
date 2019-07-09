@@ -8,17 +8,15 @@
 
     npm link 1ocke.brain-games
 
+## Usage
+    <game-name>
+
 ## brain-even
-[![asciicast](https://asciinema.org/a/m6v4inLlYoEKP7I8nqXvtXYht.svg)](https://asciinema.org/a/m6v4inLlYoEKP7I8nqXvtXYht)
 
 ## brain-calc
-[![asciicast](https://asciinema.org/a/sAYHZyqBrW3iAmiTigiFjjEcu.svg)](https://asciinema.org/a/sAYHZyqBrW3iAmiTigiFjjEcu)
 
 ## brain-gcd
-[![asciicast](https://asciinema.org/a/qnayHSBJDpAhPCp4m7FxqDpHH.svg)](https://asciinema.org/a/qnayHSBJDpAhPCp4m7FxqDpHH)
 
 ## brain-progression
-[![asciicast](https://asciinema.org/a/ri35tv2wUTgx8oBGPuITphid0.svg)](https://asciinema.org/a/ri35tv2wUTgx8oBGPuITphid0)
 
 ## brain-prime
-[![asciicast](https://asciinema.org/a/I03dNkkdVgObxm4wYy4ZJKK08.svg)](https://asciinema.org/a/I03dNkkdVgObxm4wYy4ZJKK08)

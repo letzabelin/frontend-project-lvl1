@@ -3,18 +3,18 @@ import { startGame } from '..';
 
 const rules = 'What number is missing in the progression?';
 
-const findNumber = () => {
+const getHiddenNumber = () => {
   const progressionLength = 10;
   const progressionStart = getRandom(1, 100);
   const progressionStep = getRandom(1, 6);
-  const hiddenElement = getRandom(1, progressionLength);
+  const hiddenNumber = getRandom(1, progressionLength);
 
   const progressionArray = getProgression(progressionLength, progressionStart, progressionStep);
 
-  const correct = `${progressionArray.splice(hiddenElement, 1, '..')}`;
+  const correct = `${progressionArray.splice(hiddenNumber, 1, '..')}`;
   const question = progressionArray.join(' ');
 
   return [correct, question];
 };
 
-export default () => startGame(rules, findNumber);
+export default () => startGame(rules, getHiddenNumber);

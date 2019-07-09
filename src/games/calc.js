@@ -4,8 +4,8 @@ import { startGame } from '..';
 const rules = 'What is the result of the expression?';
 
 const getCalc = () => {
-  const a = getRandom(1, 10);
-  const b = getRandom(1, 10);
+  const firstNumber = getRandom(1, 10);
+  const secondNumber = getRandom(1, 10);
   const operation = getRandom(1, 4);
 
   let correct;
@@ -13,16 +13,16 @@ const getCalc = () => {
 
   switch (operation) {
     case 1:
-      question = `${a} + ${b}`;
-      correct = `${a + b}`;
+      question = `${firstNumber} + ${secondNumber}`;
+      correct = `${firstNumber + secondNumber}`;
       break;
     case 2:
-      question = `${a} - ${b}`;
-      correct = `${a - b}`;
+      question = `${firstNumber} - ${secondNumber}`;
+      correct = `${firstNumber - secondNumber}`;
       break;
     case 3:
-      question = `${a} * ${b}`;
-      correct = `${a * b}`;
+      question = `${firstNumber} * ${secondNumber}`;
+      correct = `${firstNumber * secondNumber}`;
       break;
     default:
       break;
