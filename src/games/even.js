@@ -1,13 +1,15 @@
-import { getRandom, isEven } from '../extra';
-import { startGame } from '..';
+import getRandom from '../utils';
+import startGame from '..';
 
-const rules = 'Answer "yes" if number even otherwise answer "no".';
+const isEven = num => num % 2 === 0;
+
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
 export const getEvenNumber = () => {
   const question = getRandom(1, 100);
-  const correct = (isEven(question)) ? 'yes' : 'no';
+  const correctAnswer = (isEven(question)) ? 'yes' : 'no';
 
-  return [correct, question];
+  return [correctAnswer, question];
 };
 
-export default () => startGame(rules, getEvenNumber);
+export default () => startGame(description, getEvenNumber);

@@ -1,34 +1,34 @@
-import { getRandom } from '../extra';
-import { startGame } from '..';
+import getRandom from '../utils';
+import startGame from '..';
 
-const rules = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const getCalc = () => {
   const firstNumber = getRandom(1, 10);
   const secondNumber = getRandom(1, 10);
   const operation = getRandom(1, 4);
 
-  let correct;
+  let correctAnswer;
   let question;
 
   switch (operation) {
     case 1:
       question = `${firstNumber} + ${secondNumber}`;
-      correct = `${firstNumber + secondNumber}`;
+      correctAnswer = `${firstNumber + secondNumber}`;
       break;
     case 2:
       question = `${firstNumber} - ${secondNumber}`;
-      correct = `${firstNumber - secondNumber}`;
+      correctAnswer = `${firstNumber - secondNumber}`;
       break;
     case 3:
       question = `${firstNumber} * ${secondNumber}`;
-      correct = `${firstNumber * secondNumber}`;
+      correctAnswer = `${firstNumber * secondNumber}`;
       break;
     default:
       break;
   }
 
-  return [correct, question];
+  return [correctAnswer, question];
 };
 
-export default () => startGame(rules, getCalc);
+export default () => startGame(description, getCalc);

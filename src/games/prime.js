@@ -1,13 +1,27 @@
-import { getRandom, isPrime } from '../extra';
-import { startGame } from '..';
+import getRandom from '../utils';
+import startGame from '..';
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const isPrime = (n) => {
+  if (n <= 1) {
+    return n;
+  }
+
+  for (let i = 2; i < n; i += 1) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const getPrimeNumber = () => {
   const question = getRandom(1, 100);
-  const correct = (isPrime(question)) ? 'yes' : 'no';
+  const correctAnswer = (isPrime(question)) ? 'yes' : 'no';
 
-  return [correct, question];
+  return [correctAnswer, question];
 };
 
-export default () => startGame(rules, getPrimeNumber);
+export default () => startGame(description, getPrimeNumber);
