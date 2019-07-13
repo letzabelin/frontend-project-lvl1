@@ -1,16 +1,17 @@
 import readlineSync from 'readline-sync';
 
+const firstAttempt = 1;
+const totalAttempts = 3;
+
 const displayGreetings = () => console.log('Welcome to the Brain Games!');
 
 const getUserName = () => {
   const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!\n`);
 
   return userName;
 };
 
-const getAnswer = (question) => {
-  console.log(`Question: ${question}`);
+const getAnswer = () => {
   const answer = readlineSync.question('Your answer: ');
 
   return answer;
@@ -19,28 +20,32 @@ const getAnswer = (question) => {
 export default (desc, dataQuestions) => {
   displayGreetings();
   console.log(`${desc}\n`);
-  const user = getUserName();
 
-  const firstAttempt = 1;
-  const totalAttempts = 3;
+  const userName = getUserName();
+  console.log(`Hello, ${userName}!\n`);
 
-  const askQuestion = (attempt) => {
+  const playRound = (attempt) => {
     if (attempt > totalAttempts) {
-      return console.log(`Congratulations, ${user}!`);
+      console.log(`Congratulations, ${userName}!`);
+
+      return;
     }
 
     const [correctAnswer, question] = dataQuestions();
-    const userAnswer = getAnswer(question);
+    console.log(`Question: ${question}`);
+    const userAnswer = getAnswer();
 
     if (correctAnswer !== userAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
-      return console.log(`Let's try again, ${user}`);
+      console.log(`Let's try again, ${userName}`);
+
+      return;
     }
 
     console.log('Correct!');
 
-    return askQuestion(attempt + 1);
+    playRound(attempt + 1);
   };
 
-  askQuestion(firstAttempt);
+  playRound(firstAttempt);
 };
