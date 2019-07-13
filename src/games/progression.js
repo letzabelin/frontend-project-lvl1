@@ -1,6 +1,9 @@
 import getRandom from '../utils';
 import startGame from '..';
 
+const description = 'What number is missing in the progression?';
+const progressionLength = 10;
+
 const getProgression = (length, start, step) => {
   const progression = [];
 
@@ -11,10 +14,7 @@ const getProgression = (length, start, step) => {
   return progression;
 };
 
-const rules = 'What number is missing in the progression?';
-const progressionLength = 10;
-
-const getHiddenNumber = () => {
+const getProgressionWithHiddenNumber = () => {
   const progressionStart = getRandom(1, 100);
   const progressionStep = getRandom(1, 6);
   const hiddenElementPosition = getRandom(0, progressionLength);
@@ -27,4 +27,4 @@ const getHiddenNumber = () => {
   return [correct, question];
 };
 
-export default () => startGame(rules, getHiddenNumber);
+export default () => startGame(description, getProgressionWithHiddenNumber);
