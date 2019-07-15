@@ -7,8 +7,8 @@ const progressionLength = 10;
 const getProgression = (length, start, step) => {
   const progression = [];
 
-  for (let i = start, j = 0; j < length; j += 1, i += step) {
-    progression.push(i);
+  for (let i = 0; i < length; i += 1) {
+    progression.push(start + (i * step));
   }
 
   return progression;

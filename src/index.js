@@ -3,25 +3,11 @@ import readlineSync from 'readline-sync';
 const firstAttempt = 1;
 const totalAttempts = 3;
 
-const displayGreetings = () => console.log('Welcome to the Brain Games!');
-
-const getUserName = () => {
-  const userName = readlineSync.question('May I have your name? ');
-
-  return userName;
-};
-
-const getAnswer = () => {
-  const answer = readlineSync.question('Your answer: ');
-
-  return answer;
-};
-
 export default (desc, dataQuestions) => {
-  displayGreetings();
+  console.log('Welcome to the Brain Games!');
   console.log(`${desc}\n`);
 
-  const userName = getUserName();
+  const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
   const playRound = (attempt) => {
@@ -33,7 +19,7 @@ export default (desc, dataQuestions) => {
 
     const [correctAnswer, question] = dataQuestions();
     console.log(`Question: ${question}`);
-    const userAnswer = getAnswer();
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (correctAnswer !== userAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
