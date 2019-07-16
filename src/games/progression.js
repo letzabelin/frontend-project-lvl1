@@ -14,7 +14,7 @@ const getProgression = (length, start, step) => {
   return progression;
 };
 
-const getProgressionWithHiddenNumber = () => {
+const generateGameData = () => {
   const progressionStart = getRandom(1, 100);
   const progressionStep = getRandom(1, 6);
   const hiddenElementPosition = getRandom(0, progressionLength);
@@ -27,4 +27,4 @@ const getProgressionWithHiddenNumber = () => {
   return [correct, question];
 };
 
-export default () => startGame(description, getProgressionWithHiddenNumber);
+export default () => startGame(description, generateGameData);

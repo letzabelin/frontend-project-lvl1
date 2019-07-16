@@ -3,7 +3,7 @@ import startGame from '..';
 
 const description = 'What is the result of the expression?';
 
-const getCalc = () => {
+const generateGameData = () => {
   const firstNumber = getRandom(1, 10);
   const secondNumber = getRandom(1, 10);
   const operation = getRandom(1, 4);
@@ -31,4 +31,4 @@ const getCalc = () => {
   return [correctAnswer, question];
 };
 
-export default () => startGame(description, getCalc);
+export default () => startGame(description, generateGameData);

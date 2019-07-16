@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 const firstAttempt = 1;
 const totalAttempts = 3;
 
-export default (desc, dataQuestions) => {
+export default (desc, gameData) => {
   console.log('Welcome to the Brain Games!');
   console.log(`${desc}\n`);
 
@@ -17,7 +17,7 @@ export default (desc, dataQuestions) => {
       return;
     }
 
-    const [correctAnswer, question] = dataQuestions();
+    const [correctAnswer, question] = gameData();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
