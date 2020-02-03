@@ -1,4 +1,4 @@
-name: brain-games
+name: Node CI
 
 on: [push]
 
