@@ -1,6 +1,6 @@
 # Brain-Games by Hexlet
 
-![](https://github.com/1ocke/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg)
+![](https://github.com/1ocke/frontend-project-lvl1/workflows/brain-games/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d3efa2cb8b46d1af1dca/maintainability)](https://codeclimate.com/github/1ocke/frontend-project-lvl1/maintainability)
 [![Build Status](https://travis-ci.org/1ocke/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/1ocke/frontend-project-lvl1)
 
